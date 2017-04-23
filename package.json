@@ -15,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/SaqrWare/image-upload-task/issues"
   },
-  "homepage": "https://github.com/SaqrWare/image-upload-task#readme"
+  "homepage": "https://github.com/SaqrWare/image-upload-task#readme",
+  "dependencies": {
+    "express": "^4.15.2",
+    "mongoose": "^4.9.5",
+    "node-sass": "^4.5.2",
+    "webpack": "^2.4.1"
+  }
 }
