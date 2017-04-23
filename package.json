@@ -20,6 +20,20 @@
     "express": "^4.15.2",
     "mongoose": "^4.9.5",
     "node-sass": "^4.5.2",
-    "webpack": "^2.4.1"
+    "@angular/common": "^4.0.0",
+    "@angular/compiler": "^4.0.0",
+    "@angular/core": "^4.0.0",
+    "@angular/forms": "^4.0.0",
+    "@angular/http": "^4.0.0",
+    "@angular/platform-browser": "^4.0.0",
+    "@angular/platform-browser-dynamic": "^4.0.0",
+    "@angular/router": "^4.0.0",
+    "core-js": "^2.4.1",
+    "rxjs": "^5.1.0",
+    "zone.js": "^0.8.4"
+  },
+  "devDependencies": {
+    "webpack": "^2.4.1",
+    "node-sass": "^4.5.2"
   }
 }
