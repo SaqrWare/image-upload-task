@@ -1,0 +1,17 @@
+{
+  "name": "upload image",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Omar Saqr <saqrware@gmai.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/SaqrWare/image-upload-task",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
