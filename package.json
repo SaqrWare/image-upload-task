@@ -1,21 +1,18 @@
 {
-  "name": "image-upload-task",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "shit",
+  "version": "0.0.0",
+  "license": "MIT",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "ng": "ng",
+    "start": "webpack-dev-server --port=4200",
+    "build": "webpack",
+    "test": "karma start ./karma.conf.js",
+    "lint": "ng lint",
+    "e2e": "protractor ./protractor.conf.js",
+    "prepree2e": "npm start",
+    "pree2e": "webdriver-manager update --standalone false --gecko false --quiet"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/SaqrWare/image-upload-task.git"
-  },
-  "author": "Omar Saqr",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/SaqrWare/image-upload-task/issues"
-  },
-  "homepage": "https://github.com/SaqrWare/image-upload-task#readme",
+  "private": true,
   "dependencies": {
     "@angular/common": "^4.0.0",
     "@angular/compiler": "^4.0.0",
@@ -26,22 +23,36 @@
     "@angular/platform-browser-dynamic": "^4.0.0",
     "@angular/router": "^4.0.0",
     "core-js": "^2.4.1",
-    "es6-shim": "^0.35.3",
-    "express": "^4.15.2",
-    "mongoose": "^4.9.5",
-    "node-sass": "^4.5.2",
     "rxjs": "^5.1.0",
     "zone.js": "^0.8.4"
   },
   "devDependencies": {
-    "html-webpack-plugin": "^2.28.0",
-    "node-sass": "^4.5.2",
+    "@angular/cli": "1.0.0",
+    "@angular/compiler-cli": "^4.0.0",
+    "@types/jasmine": "2.5.38",
+    "@types/node": "~6.0.60",
+    "codelyzer": "~2.0.0",
+    "ts-node": "~2.0.0",
+    "tslint": "~4.5.0",
+    "typescript": "~2.2.0",
+    "webpack-dev-server": "~2.3.0",
+    "autoprefixer": "^6.5.3",
+    "css-loader": "^0.26.1",
+    "cssnano": "^3.10.0",
+    "exports-loader": "^0.6.3",
+    "file-loader": "^0.10.0",
+    "json-loader": "^0.5.4",
+    "karma-sourcemap-loader": "^0.3.7",
+    "less-loader": "^2.2.3",
+    "postcss-loader": "^0.13.0",
+    "postcss-url": "^5.1.2",
     "raw-loader": "^0.5.1",
-    "ts-loader": "^2.0.3",
-    "tslint": "^5.1.0",
-    "tslint-loader": "^3.5.3",
-    "typescript": "^2.2.2",
-    "webpack": "^2.4.1",
-    "webpack-dev-server": "^2.4.4"
+    "sass-loader": "^4.1.1",
+    "script-loader": "^0.7.0",
+    "source-map-loader": "^0.1.5",
+    "istanbul-instrumenter-loader": "^2.0.0",
+    "style-loader": "^0.13.1",
+    "stylus-loader": "^2.4.0",
+    "url-loader": "^0.5.7"
   }
 }
