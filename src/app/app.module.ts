@@ -6,11 +6,16 @@ import  {RouterModule} from '@angular/router'
 
 import {AppComponent} from './app.component';
 import {ImagesListComponent} from './components/images-list/images-list.component';
+import {ImageUploadComponent} from './components/image-upload/image-upload.component';
+import {ImageRowComponent} from './components/image-row/image-row.component';
+
 
 @NgModule({
     declarations: [
         AppComponent,
-        ImagesListComponent
+        ImagesListComponent,
+        ImageRowComponent,
+        ImageUploadComponent
     ],
     imports: [
         BrowserModule,
@@ -20,6 +25,10 @@ import {ImagesListComponent} from './components/images-list/images-list.componen
             {
                 path: '',
                 component: ImagesListComponent
+            },
+            {
+                path: 'upload',
+                component: ImageUploadComponent
             }
         ])
     ],

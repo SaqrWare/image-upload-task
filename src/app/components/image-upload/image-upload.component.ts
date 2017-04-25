@@ -2,9 +2,9 @@ import {Component} from '@angular/core';
 
 @Component({
     selector: 'images-upload',
-    templateUrl: './images-upload.component.html',
-    styleUrls: ['./images-upload.component.css']
+    templateUrl: './image-upload.component.html',
+    styleUrls: ['./image-upload.component.css']
 })
-export class ImagesUploadComponent {
+export class ImageUploadComponent {
     title = 'app works!';
 }
