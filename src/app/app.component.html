@@ -1,3 +1,14 @@
-<h1>
-  {{title}}
-</h1>
+<nav class="navbar navbar-default">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand" routerLink="/">Home</a>
+        </div>
+        <a routerLink="/upload" class="btn btn-default navbar-btn">Upload image</a>
+    </div>
+</nav>
+
+<section>
+    <div class="container">
+        <router-outlet></router-outlet>
+    </div>
+</section>

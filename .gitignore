@@ -234,3 +234,4 @@ fabric.properties
 .idea/sonarlint
 
 # End of https://www.gitignore.io/api/sass,node,linux,macos,angular,webstorm,sublimetext
+/src/bower_components/
