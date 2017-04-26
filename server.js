@@ -9,7 +9,12 @@ var bodyParser = require('body-parser');
 var app = express();
 var server = http.createServer(app);
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(bodyParser.json({limit: '50mb'}));
+app.use(bodyParser.urlencoded({extended: false, limit: '50mb'}));
 
+//Routes
+var apiRouter = require('./routes/api');
+app.use('/api', apiRouter);
 
 app.use(function (req, res, next) {
     var err = new Error('Not Found');
