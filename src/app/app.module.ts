@@ -8,6 +8,7 @@ import {AppComponent} from './app.component';
 import {ImagesListComponent} from './components/images-list/images-list.component';
 import {ImageUploadComponent} from './components/image-upload/image-upload.component';
 import {ImageRowComponent} from './components/image-row/image-row.component';
+import {ServerService} from './services/server.service';
 
 
 @NgModule({
@@ -32,7 +33,7 @@ import {ImageRowComponent} from './components/image-row/image-row.component';
             }
         ])
     ],
-    providers: [],
+    providers: [ServerService],
     bootstrap: [AppComponent]
 })
 export class AppModule {
