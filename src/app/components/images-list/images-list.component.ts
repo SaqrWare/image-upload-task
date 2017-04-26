@@ -1,15 +1,21 @@
 import {Component} from '@angular/core';
 import {ServerService} from '../../services/server.service';
+import {Image} from '../../classes/image'
+
 @Component({
     selector: 'images-list',
     templateUrl: './images-list.component.html',
     styleUrls: ['./images-list.component.css']
 })
 export class ImagesListComponent {
-    title = 'app works!';
+    public images: Image[];
 
-    constructor(server: ServerService) {
-        server.getImages();
-
+    constructor(private server: ServerService) {
     }
+
+    ngOnInit() {
+
+        this.server.getImages().subscribe(images => this.images = images)
+    }
+
 }

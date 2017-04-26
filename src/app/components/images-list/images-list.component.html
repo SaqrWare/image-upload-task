@@ -1,5 +1,5 @@
 <div>
-    <image-row></image-row>
-    <image-row></image-row>
-    <image-row></image-row>
+    <div *ngFor="let image of images">
+        <image-row [image]="image"></image-row>
+    </div>
 </div>

@@ -1,5 +1,5 @@
-import {Component} from '@angular/core';
-
+import {Component, Input} from '@angular/core';
+import {Image} from '../../classes/image'
 @Component({
     selector: 'image-row',
     templateUrl: './image-row.component.html',
@@ -7,4 +7,5 @@ import {Component} from '@angular/core';
 })
 export class ImageRowComponent {
     title = 'app works!';
+    @Input() image: Image;
 }
