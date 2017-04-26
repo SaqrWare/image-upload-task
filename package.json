@@ -4,7 +4,8 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "webpack-dev-server --port=4200",
+    "start":"node server.js",
+    "startng": "webpack-dev-server --port=4200",
     "build": "webpack",
     "lint": "ng lint"
   },
