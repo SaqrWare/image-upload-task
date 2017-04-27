@@ -10,7 +10,8 @@
     "lint": "ng lint",
     "uglify": "./node_modules/uglify-js/bin/uglifyjs dist/inline.bundle.js dist/polyfills.bundle.js dist/styles.bundle.js dist/vendor.bundle.js dist/main.bundle.js -cm -o public/main.js",
     "sass": "./node_modules/node-sass/bin/node-sass src/styles.css --output-style compressed >public/style.css",
-    "deploy": "npm install;npm run build;npm run sass;npm run uglify;npm run start"
+    "deploy": "npm run build;npm run sass;npm run uglify;",
+    "postinstall":"npm run deploy"
   },
   "private": true,
   "dependencies": {
