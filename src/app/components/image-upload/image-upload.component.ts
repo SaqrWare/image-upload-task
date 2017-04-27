@@ -1,5 +1,7 @@
 import {Component} from '@angular/core';
 import {Http, Headers} from '@angular/http';
+import {Router} from '@angular/router';
+
 @Component({
     selector: 'images-upload',
     templateUrl: './image-upload.component.html',
@@ -8,9 +10,11 @@ import {Http, Headers} from '@angular/http';
 export class ImageUploadComponent {
     private fileContent;
     private http;
+    private router;
 
-    constructor(http: Http) {
+    constructor(http: Http, router: Router) {
         this.http = http;
+        this.router = router;
     }
 
     selectImage(img, event, description, submitButton) {
@@ -39,9 +43,11 @@ export class ImageUploadComponent {
 
         btnFile.disabled = true;
         event.target.disabled = true;
-        event.target.innerHTML = "Uploading ..."
+        event.target.innerHTML = "Uploading ...";
         this.http.post('/api/images', data, {headers: headers})
-            .subscribe(console.log);
+            .subscribe(() => {
+                this.router.navigate(['/']);
+            });
         console.log('submit event')
     }
 }

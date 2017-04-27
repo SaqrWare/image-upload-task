@@ -4,6 +4,12 @@ var path = require('path');
 var bodyParser = require('body-parser');
 global.ok = require('okay');
 global.appRoot = path.resolve(__dirname);
+const mongoose = require('mongoose');
+const config = require('./config/config');
+
+// db connection
+mongoose.connect(config.dbConnection);
+mongoose.set('debug', true);
 
 //Init app
 var app = express();
