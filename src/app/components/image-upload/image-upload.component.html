@@ -4,10 +4,11 @@
             <h3 class="panel-title">Upload image</h3>
         </div>
         <div class="panel-body">
-            <button class="btn-default btn btn-file btn-block">Choose Image <input accept="image/jpeg"
-                                                                                   (change)="selectImage(imagePreview,$event,description)"
+            <button #btnFile class="btn-default btn btn-file btn-block">Choose Image <input accept="image/jpeg"
+                                                                                   (change)="selectImage(imagePreview,$event,description,submitButton)"
                                                                                    type="file"
-                                                                                   name="file" id=""></button>
+                                                                                   name="file" #fileSelect id="">
+            </button>
             <p></p>
             <img src="https://placehold.it/1600x900?text=Preview" class="img-responsive img-rounded" alt=""
                  #imagePreview>
@@ -17,7 +18,7 @@
             </div>
             <p>
             </p>
-            <button class="btn btn-block btn-primary" (click)="submit" >Upload</button>
+            <button class="btn btn-block btn-primary" #submitButton disabled (click)="submit($event,description,fileSelect,btnFile)">Upload</button>
         </div>
     </div>
 </div>

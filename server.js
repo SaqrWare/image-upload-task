@@ -1,9 +1,9 @@
 var http = require('http');
 var express = require('express');
 var path = require('path');
-global.appRoot = path.resolve(__dirname);
-global.ok = require('okay');
 var bodyParser = require('body-parser');
+global.ok = require('okay');
+global.appRoot = path.resolve(__dirname);
 
 //Init app
 var app = express();

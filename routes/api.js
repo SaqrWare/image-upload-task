@@ -1,5 +1,6 @@
 var router = require('express').Router();
-
+var uploadHelper = require('../helpers/uploadHelper');
+var textHelper = require('../helpers/textHelper');
 router.route('/images')
     .get((req, res, next) => {
         let data = [
@@ -25,7 +26,14 @@ router.route('/images')
         res.json(data);
     })
     .post((req, res, next) => {
-        console.log(req)
+        var name = textHelper.randomChars(4) + '.jpg'
+        var fileName = appRoot + '/public/uploads/' + name;
+        uploadHelper.save64(req.body.imageContent, fileName, () => {
+            uploadHelper.compressImage(fileName, (files) => {
+                res.json({message: 'yos idiot!'});
+                console.log(files)
+            });
+        });
     });
 
 module.exports = router;
