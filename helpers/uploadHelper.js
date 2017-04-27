@@ -2,7 +2,7 @@ const fs = require('fs');
 const imagemin = require('imagemin');
 const imageminJpegtran = require('imagemin-jpegtran');
 const imageminJpegRecompress = require('imagemin-jpeg-recompress');
-const imageminJpegoptim = require('imagemin-jpegoptim');
+// const imageminJpegoptim = require('imagemin-jpegoptim');
 const imageminMozjpeg = require('imagemin-mozjpeg');
 
 //Google cloud
@@ -32,7 +32,7 @@ module.exports = {
             plugins: [
                 imageminJpegtran(),
                 imageminJpegRecompress(),
-                imageminJpegoptim(),
+                // imageminJpegoptim(),
                 imageminMozjpeg()
             ]
         }).then((files) => {
