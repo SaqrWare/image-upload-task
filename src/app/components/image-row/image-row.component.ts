@@ -6,6 +6,5 @@ import {Image} from '../../classes/image'
     styleUrls: ['./image-row.component.css']
 })
 export class ImageRowComponent {
-    title = 'app works!';
     @Input() image: Image;
 }
