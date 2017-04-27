@@ -21,7 +21,9 @@ app.use(bodyParser.urlencoded({extended: false, limit: '50mb'}));
 //Routes
 var apiRouter = require('./routes/api');
 app.use('/api', apiRouter);
-
+app.get('*', (req, res, next) => {
+    res.sendfile('public/index.html')
+});
 app.use(function (req, res, next) {
     var err = new Error('Not Found');
     err.status = 404;
